@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <div class= "header">
+      <h1 id="MapTitle" type= "text"> Map it </h1>
+      <h2 id="SubTitle" type= "text"> Quick mapping App </h1>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <div id="main">
+        <h2 id="title" type="text"> </h2>
+        <p class="message initial"> Visualization for JSON file.</p>
+
+        <input type="text" id="urlTxt" value="https://raw.githubusercontent.com/CPLN692-MUSA611/datasets/master/json/philadelphia-solar-installations.json">
+        <button id="mapButton"> Map </button>
+
+      </div>
+
+
+      <div id="more">
+        <p>
+          Choose Lat/Long Manually?</p>
+        <p>
+          <select class="coord" id="coord-y">
+            <option value="" class="auto" disabled selected>Latitude:</option>
+            <option value="Y">Y</option>
+            <option value="Y">y</option>
+            <option value="LAT">LAT</option>
+            <option value="LATITUDE">LAT_</option>
+            <option value="LATITUDE">LATITUDE</option>
+          </select>
+
+          <select class="coord" id="coord-x">
+            <option value="" class="auto" disabled selected>Longitude:</option>
+            <option value="X">X</option>
+            <option value="X">x</option>
+            <option value="LON">LON</option>
+            <option value="LON">Lon</option>
+            <option value="LNG">LNG</option>
+            <option value="LONG">LONG</option>
+            <option value="LONG">LONG_</option>
+            <option value="LONGITUDE">LONGITUDE</option>
+          </select>
+
+          <p class="checkwrap">
+            <input type="checkbox" id="auto" name="auto" selected checked>
+            <label for="auto">Pick lat/lng labels for me</label>
+          </p>
+      </div>
+      <div class= "Remove">
+        <button id="buttons"> Remove </button>
+      </div>
+
+    </div>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+    <!-- Javascript Imports -->
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
